@@ -1,0 +1,44 @@
+
+.image {
+    width: 104px;
+    height: 91px;
+}
+
+.navbar {
+    background-color: #EBE9DB;
+}
+
+.nav {
+    padding-right: 100px;
+}
+
+.link-font{
+    font-family: 'Changa One', sans-serif;
+    color: black;
+    font-size: 30px;
+    
+}
+
+.image-banner{
+    width: 622px;
+    height: 591px;
+    margin-left: 250px;
+    
+}
+
+.text-banner {
+    font-family: 'Changa One', sans-serif;
+    margin-left:250px;
+    font-size: 42px;
+    padding-left: 10px;
+}
+
+.div-main{
+    margin-top: 100px;
+}
+
+.card-dogs {
+    padding-top: 9%;
+    padding-left: 10%;
+    
+}

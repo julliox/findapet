@@ -1,0 +1,74 @@
+.image {
+    width: 104px;
+    height: 91px;
+}
+
+.navbar {
+    background-color: #EBE9DB;
+}
+
+.nav {
+    padding-right: 100px;
+}
+
+.link-font{
+    font-family: 'Changa One', sans-serif;
+    color: black;
+    font-size: 30px;
+    
+}
+
+.image-banner{
+    width: 622px;
+    height: 591px;
+    margin-left: 250px;
+    
+}
+
+.body{
+    width: 580px;
+    height: 532px;
+    position: fixed;
+    left: 20%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+    background-color: #D9D9D9;
+}
+
+.card-body{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.email-control, .password-control {
+    padding-top:35px ;
+}
+
+.button-control{
+    padding-top: 45px;
+}
+
+.button-size{
+    font-size: 30px;
+    width: 180px;
+    height: 55px;
+}
+
+input {
+    height: 50px;
+    font-size: 20px;
+}
+
+.btn{
+    border: none;
+}
+
+.btn-success {
+    color: #000000;
+    background-color: #EBE9DB;
+}
+

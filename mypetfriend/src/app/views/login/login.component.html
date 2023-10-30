@@ -1,0 +1,68 @@
+<nav class="navbar">
+    <div class="container-fluid pr-5">
+      <img class="image" src="../assets/logo.jpg" alt="">
+      <ul class="nav ">
+        <li class="nav-item ">
+          <a class="nav-link link-font" href="">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-font" href="dologin">ENTRAR</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-font" href="#">CADASTRAR</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+
+<!-- <div class="grid justify-content-center card">
+  <div class="col-10 md:col-6 lg:col-4">
+    <p-card>
+      <div class="grid">
+        <div class="col-12">
+          <h2>Car sale</h2>
+        </div>
+        <div class="col-12">
+          <label for="">EMAIL: </label>
+          <input [(ngModel)]="requestLogin.email" type="text" pInputText class="col-12">
+        </div>
+        <div class="col-12">
+          <label for="">SENHA: </label>
+          <input [(ngModel)]="requestLogin.password" type="password" pInputText class="col-12">
+        </div>
+        <div class="col-12">
+          <button (click)="doLogin()" pButton pRipple label="ENTRAR" class="p-button-success col-12"></button>
+        </div>
+      </div>
+    </p-card>
+  </div>
+</div> -->
+
+<section class="body card shadow">
+  <div class="card-body">
+    <h1 class="card-title mb-1 mt-2">LOGIN</h1>
+    <div>
+      <div class="row mb-3">
+        <div class="col-12 email-control">
+          <label for="email">EMAIL: </label>
+          <input [(ngModel)]="requestLogin.email" type="text" id="email" pInputText class="form-control" placeholder="DIGITE SEU EMAIL">
+        </div>
+        <div class="col-12 password-control">
+          <label for="password">SENHA: </label>
+          <div class="input-group">
+            <input [type]="showPassword ? 'text' : 'password'" [(ngModel)]="requestLogin.password" pInputText class="form-control" [placeholder]="showPassword? 'DIGITE SUA SENHA': '*****'">
+            <div class="input-group-text cursor-pointer" (click)="toggleShowPassword()">
+              <i class="fa-solid" [ngClass]="showPassword? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"></i>
+            </div>
+          </div>
+        </div>
+        <div class="row button-control">
+          <div class="col-12 pt-2">
+            <button (click)="doLogin()" class="btn btn-success button-size">ENTRAR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
