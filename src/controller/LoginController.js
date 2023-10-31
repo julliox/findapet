@@ -35,7 +35,7 @@ module.exports = {
                 secret,
             )
 
-            res.status(200).json({token})
+            res.status(200).json({token, msg:"Login efetuado com sucesso!"})
         } catch(err){
             console.log(err)
             res.status(500).json({internalError: "Houve um erro interno, Tente novamente mais tarde."})

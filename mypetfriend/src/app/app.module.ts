@@ -12,12 +12,14 @@ import { AppComponent } from './app.component';
 import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 import { LoginComponent } from './views/login/login.component';
 import { HomepageComponent } from './views/homepage/homepage.component';
+import { RegisterComponent } from './views/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomepageComponent
+    HomepageComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,35 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AlertService } from 'src/app/resources/services/alert.service';
 import { RequestLogin } from 'src/app/resources/models/RequestLogin';
+import { AlertService } from 'src/app/resources/services/alert.service';
 import { LoginService } from 'src/app/resources/services/login.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
-export class LoginComponent {
-  //hidden/show password system 
+export class RegisterComponent {
   showPassword: boolean = false;
-
+  showConfirmPassword: boolean = false;
 
   public requestLogin: RequestLogin
 
   constructor(
     private alertService: AlertService,
     private loginService: LoginService,
-    private router: Router
-  ){}
+    private router: Router) {}
 
   ngOnInit(): void {
     this.requestLogin = new RequestLogin();
   }
-  
-  public doLogin(): void {
-    this.loginService.doLogin(this.requestLogin).subscribe({
+
+  public doRegister(): void {
+    this.loginService.doRegister(this.requestLogin).subscribe({
       next: (data)=> {
-        this.router.navigate([''])
+        this.router.navigate(['dologin'])
         this.alertService.success(data.msg)
         console.log(data)
       }, error: (err)=>{
@@ -42,9 +40,11 @@ export class LoginComponent {
     })
   }
 
-
-  //Hidden and show password system 
   toggleShowPassword(){
     this.showPassword = !this.showPassword
+  }
+
+  toggleShowConfirmPassword(){
+    this.showConfirmPassword = !this.showConfirmPassword
   }
 }

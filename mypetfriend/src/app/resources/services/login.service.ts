@@ -20,4 +20,10 @@ export class LoginService {
       this.authService.loginResponse = loginResponse
     )));
   }
+
+  public doRegister(requestLogin: RequestLogin): Observable<ResponseLogin>{
+    return this.HttpClient.post<ResponseLogin>('http://localhost:3000/api/users', requestLogin).pipe(tap((loginResponse) => (
+      this.authService.loginResponse = loginResponse
+    )));
+  }
 }
