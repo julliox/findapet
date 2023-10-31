@@ -33,7 +33,7 @@ module.exports = {
         try {
             await user.save()
 
-            res.status(201).json({msg: 'Usuario criado com sucesso!'})
+            res.status(201).json({msg:'Usuario criado com sucesso!'})
         } catch (err){
             console.log(err)
             res.status(500).json({internalError: "Houve um erro interno, Tente novamente mais tarde."})
