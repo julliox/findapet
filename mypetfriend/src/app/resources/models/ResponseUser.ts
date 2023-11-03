@@ -1,4 +1,4 @@
-export class ResponseLogin {
+export class ResponseUser {
     public jwt: string;
     public msg: string;
 }

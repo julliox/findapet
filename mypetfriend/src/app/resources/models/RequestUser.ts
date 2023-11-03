@@ -1,4 +1,4 @@
-export class RequestLogin {
+export class RequestUser {
     public name: string;
     public email: string;
     public password: string; 

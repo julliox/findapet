@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { RequestLogin } from 'src/app/resources/models/RequestLogin';
+import { RequestUser } from 'src/app/resources/models/RequestUser';
 import { AlertService } from 'src/app/resources/services/alert.service';
-import { LoginService } from 'src/app/resources/services/login.service';
+import { UserService } from 'src/app/resources/services/User.service';
 
 @Component({
   selector: 'app-register',
@@ -13,19 +13,19 @@ export class RegisterComponent {
   showPassword: boolean = false;
   showConfirmPassword: boolean = false;
 
-  public requestLogin: RequestLogin
+  public requestUser: RequestUser
 
   constructor(
     private alertService: AlertService,
-    private loginService: LoginService,
+    private userService: UserService,
     private router: Router) {}
 
   ngOnInit(): void {
-    this.requestLogin = new RequestLogin();
+    this.requestUser = new RequestUser();
   }
 
   public doRegister(): void {
-    this.loginService.doRegister(this.requestLogin).subscribe({
+    this.userService.doRegister(this.requestUser).subscribe({
       next: (data)=> {
         this.router.navigate(['dologin'])
         this.alertService.success(data.msg)

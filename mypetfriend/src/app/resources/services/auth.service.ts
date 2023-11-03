@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { ResponseLogin } from '../models/ResponseLogin';
+import { ResponseUser } from '../models/ResponseUser';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-public loginResponse: ResponseLogin;
+public userResponse: ResponseUser;
 
 public clear(): void {
-    this.loginResponse = undefined!;
+    this.userResponse = undefined!;
 }
 
 public isAuthenticated():boolean {
-    return Boolean(this.loginResponse?.jwt)
+    return Boolean(this.userResponse?.jwt)
 }
 }
