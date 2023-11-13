@@ -13,13 +13,17 @@ import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 import { LoginComponent } from './views/login/login.component';
 import { HomepageComponent } from './views/homepage/homepage.component';
 import { RegisterComponent } from './views/register/register.component';
+import { PetsViewsComponent } from './views/pets-views/pets-views.component';
+import { HomeComponent } from './views/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomepageComponent,
-    RegisterComponent
+    RegisterComponent,
+    PetsViewsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

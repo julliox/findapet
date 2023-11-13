@@ -1,0 +1,20 @@
+
+.image {
+    width: 104px;
+    height: 91px;
+}
+
+.navbar {
+    background-color: #EBE9DB;
+}
+
+.nav {
+    padding-right: 100px;
+}
+
+.link-font{
+    font-family: 'Changa One', sans-serif;
+    color: black;
+    font-size: 30px;
+    
+}

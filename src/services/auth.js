@@ -14,7 +14,7 @@ export function checkToken(req, res, next) {
         const secret = process.env.SECRET
 
         jwt.verify(token, secret)
-
+        req._id = decoded._id
         next()
 
     } catch{

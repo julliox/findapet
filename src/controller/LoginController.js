@@ -32,14 +32,18 @@ module.exports = {
                 {
                     id: user._id
                 },
-                secret,
-            )
+                secret, {expiresIn: 300 }
+            );
 
-            res.status(200).json({token, msg: "Login efetuado com sucesso!"})
+            res.status(200).json({auth: true , token, msg: "Login efetuado com sucesso!"})
         } catch(err){
             console.log(err)
             res.status(500).json({internalError: "Houve um erro interno, Tente novamente mais tarde."})
         }
+    },
+
+    async doLogoff (req, res) {
+
     }
 
 }

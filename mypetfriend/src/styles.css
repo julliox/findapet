@@ -1,5 +1,9 @@
+
 .body {
     font-family: 'Changa One', sans-serif;
     color: black;
     font-size: 36px;
+
+    max-width: 100vw;
+    overflow: hidden;
 }

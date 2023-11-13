@@ -29,6 +29,8 @@ export class LoginComponent {
   public doLogin(): void {
     this.userService.doLogin(this.requestUser).subscribe({
       next: (data)=> {
+        const token = data.token
+        window.localStorage.setItem('token', token)
         this.router.navigate([''])
         this.alertService.success(data.msg)
         console.log(data)

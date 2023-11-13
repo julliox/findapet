@@ -20,9 +20,9 @@
 }
 
 .image-banner{
-    width: 622px;
-    height: 591px;
-    margin-left: 250px;
+    width: 600px;
+    height: 569px;
+    margin-left: 200px;
     
 }
 
@@ -38,7 +38,41 @@
 }
 
 .card-dogs {
-    padding-top: 9%;
-    padding-left: 10%;
+    padding-top: 8%;
+    padding-left: 5%;
+   
+    
     
 }
+
+.div-buttons {
+    padding-top: 20px;
+
+    flex-direction: row;
+    
+    
+}
+
+.button-adotar, .button-cadastrar {
+    width: 300px;
+    height: 57px;
+    border-radius: 30px;
+    margin-right: 10px;
+    font-family: 'Changa One', sans-serif;
+    color: black;
+    font-size: 30px;
+}
+
+.button-cadastrar {
+    font-size: 23px;
+}
+
+.div-carrosel {
+    margin-left: 85px;
+    
+}
+
+.carousel-inner {
+    border-radius: 10px;
+}
+

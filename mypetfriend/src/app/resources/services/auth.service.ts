@@ -13,6 +13,6 @@ public clear(): void {
 }
 
 public isAuthenticated():boolean {
-    return Boolean(this.userResponse?.jwt)
+    return Boolean(this.userResponse?.token)
 }
 }

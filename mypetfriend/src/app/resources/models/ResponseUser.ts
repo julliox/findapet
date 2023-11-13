@@ -1,4 +1,4 @@
 export class ResponseUser {
-    public jwt: string;
+    public token: string;
     public msg: string;
 }
