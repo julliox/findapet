@@ -9,7 +9,11 @@ import { PetsViewsComponent } from './views/pets-views/pets-views.component';
 
 const routes: Routes = [
   {
-    path: '', component:PetsViewsComponent,
+    path: '', component:HomeComponent,
+    children: [
+      {path: '', redirectTo: 'pets', pathMatch: 'full'},
+      {path: 'pets', component: PetsViewsComponent}
+    ],
     canActivate: [AuthGuardService]
   },
 
@@ -21,7 +25,8 @@ const routes: Routes = [
       {path: 'dologin', component: LoginComponent},
       {path: 'doRegister', component: RegisterComponent}
     ]
-  }
+  },
+  {path: '**', redirectTo: 'home', pathMatch: 'full'}
 ];
 
 @NgModule({

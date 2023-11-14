@@ -1,11 +1,19 @@
 import { Injectable } from '@angular/core';
 import { ResponseUser } from '../models/ResponseUser';
+import { Router } from '@angular/router';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
 
+
+export class AuthService {
+  constructor(
+    route: Router,
+    ) {
+
+}
 public userResponse: ResponseUser;
 
 public clear(): void {
@@ -15,4 +23,5 @@ public clear(): void {
 public isAuthenticated():boolean {
     return Boolean(this.userResponse?.token)
 }
+
 }

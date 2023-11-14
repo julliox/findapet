@@ -10,6 +10,15 @@ import { UserService } from 'src/app/resources/services/User.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  public isLogged () {
+    const jwt = window.localStorage.getItem('token')
+    if (jwt) {
+      this.router.navigate(['home'])
+    } 
+  }
+  
+
+
   //hidden/show password system 
   showPassword: boolean = false;
 

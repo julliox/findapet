@@ -18,7 +18,13 @@ export class AuthGuardService implements CanActivate{
       return true
     }else {
       this.router.navigate(['home'])
+      console.log("vc nao esta logado")
       return false
     }
+  }
+
+  doLogout(): void{
+    window.localStorage.removeItem('token')
+    this.router.navigate(['home'])
   }
 }
