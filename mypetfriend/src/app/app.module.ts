@@ -15,6 +15,7 @@ import { HomepageComponent } from './views/homepage/homepage.component';
 import { RegisterComponent } from './views/register/register.component';
 import { PetsViewsComponent } from './views/pets-views/pets-views.component';
 import { HomeComponent } from './views/home/home.component';
+import { PetsHomepageComponent } from './views/pets-homepage/pets-homepage.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HomeComponent } from './views/home/home.component';
     HomepageComponent,
     RegisterComponent,
     PetsViewsComponent,
-    HomeComponent
+    HomeComponent,
+    PetsHomepageComponent
   ],
   imports: [
     BrowserModule,

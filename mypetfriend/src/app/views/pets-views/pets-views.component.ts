@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthGuardService } from 'src/app/resources/services/auth-guard.service';
 
 @Component({
   selector: 'app-pets-views',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./pets-views.component.css']
 })
 export class PetsViewsComponent {
-
+  constructor(
+    private authGuard: AuthGuardService,
+    
+   ){}
+ 
+   public logout(){
+     this.authGuard.doLogout()
+     
+   }
 }

@@ -6,13 +6,14 @@ import { RegisterComponent } from './views/register/register.component';
 import { HomeComponent } from './views/home/home.component';
 import { AuthGuardService } from './resources/services/auth-guard.service';
 import { PetsViewsComponent } from './views/pets-views/pets-views.component';
+import { PetsHomepageComponent } from './views/pets-homepage/pets-homepage.component';
 
 const routes: Routes = [
   {
-    path: '', component:HomeComponent,
+    path: '', component:PetsViewsComponent,
     children: [
-      {path: '', redirectTo: 'pets', pathMatch: 'full'},
-      {path: 'pets', component: PetsViewsComponent}
+      {path: '', redirectTo: 'pets-homepage', pathMatch: 'full'},
+      {path: 'pets-homepage', component: PetsHomepageComponent}
     ],
     canActivate: [AuthGuardService]
   },

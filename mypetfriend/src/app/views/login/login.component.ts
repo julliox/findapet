@@ -14,6 +14,7 @@ export class LoginComponent {
     const jwt = window.localStorage.getItem('token')
     if (jwt) {
       this.router.navigate(['home'])
+      window.localStorage.removeItem('token')
     } 
   }
   
@@ -33,6 +34,8 @@ export class LoginComponent {
 
   ngOnInit(): void {
     this.requestUser = new RequestUser();
+    this.isLogged()
+    
   }
   
   public doLogin(): void {
@@ -40,7 +43,7 @@ export class LoginComponent {
       next: (data)=> {
         const token = data.token
         window.localStorage.setItem('token', token)
-        this.router.navigate([''])
+        this.router.navigate(['pets-homepage'])
         this.alertService.success(data.msg)
         console.log(data)
       }, error: (err)=>{
@@ -58,4 +61,6 @@ export class LoginComponent {
   toggleShowPassword(){
     this.showPassword = !this.showPassword
   }
+
+  
 }

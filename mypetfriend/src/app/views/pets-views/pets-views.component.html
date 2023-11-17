@@ -1,1 +1,17 @@
-<p>pets-views works!</p>
+<nav class="navbar">
+    <div class="container-fluid pr-4">
+      <img class="image" src="../assets/logo.jpg" alt="">
+      <ul class="nav ">
+        <li class="nav-item ">
+          <a class="nav-link link-font" href="">PERFIL</a>
+        </li>
+        <li class="nav-item">
+          <a (click)="logout()" class="nav-link link-font" href="home">SAIR</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+

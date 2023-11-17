@@ -11,31 +11,9 @@ import { Router } from '@angular/router';
 export class HomeComponent {
   constructor(
    private authGuard: AuthGuardService,
-   private router: Router 
+   
   ){}
 
-  ngOnInit() {
-    this.isLogged()
-  }
-  public logged() {
-    const log = window.localStorage.getItem('token')
-    if (log) {
-      return true
-    } else {
-      return false
-    }
-  }
 
-  public logout(){
-    this.authGuard.doLogout()
-    
-  }
-
-  public isLogged () {
-    const jwt = window.localStorage.getItem('token')
-    if (jwt) {
-      this.router.navigate(['home'])
-    } 
-  }
   
 }

@@ -10,6 +10,15 @@ import { UserService } from 'src/app/resources/services/User.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+  public isLogged () {
+    const jwt = window.localStorage.getItem('token')
+    if (jwt) {
+      this.router.navigate(['home'])
+      window.localStorage.removeItem('token')
+    } 
+  }
+
+
   showPassword: boolean = false;
   showConfirmPassword: boolean = false;
 
@@ -22,6 +31,7 @@ export class RegisterComponent {
 
   ngOnInit(): void {
     this.requestUser = new RequestUser();
+    this.isLogged()
   }
 
   public doRegister(): void {
